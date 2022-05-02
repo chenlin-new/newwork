@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="logservice" />
         <module name="user-service" />
         <module name="order-service" />
+        <module name="logListener" />
         <module name="Feigen-api" />
         <module name="eureka-server" />
         <module name="gateway" />
@@ -20,6 +22,8 @@
       <module name="eureka-server" target="1.8" />
       <module name="Feigen-api" target="8" />
       <module name="gateway" target="8" />
+      <module name="logListener" target="8" />
+      <module name="logservice" target="8" />
       <module name="order-service" target="1.8" />
       <module name="user-service" target="1.8" />
     </bytecodeTargetLevel>
@@ -29,6 +33,8 @@
       <module name="Feigen-api" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="logListener" options="-parameters" />
+      <module name="logservice" options="-parameters" />
       <module name="order-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>

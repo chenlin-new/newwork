@@ -1,0 +1,11 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: order
+  rabbitmq:
+    host: 192.168.138.100 # 主机名
+    port: 5672 # 端口
+    virtual-host: / # 虚拟主机
+    username: itcast # 用户名
+    password: 123321 # 密码

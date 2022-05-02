@@ -1,0 +1,9 @@
+server:
+  port: 8077
+
+spring:
+  application:
+    name: logservice
+  cloud:
+    nacos:
+      server-addr: localhost:8848
