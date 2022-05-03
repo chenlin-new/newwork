@@ -79,4 +79,6 @@ public class SpringRabbitListener {
     public void listenObjectQueue(Map<String,Object> msg){
         System.out.println("接收到object.queue的消息：" + msg);
     }
+
+
 }
