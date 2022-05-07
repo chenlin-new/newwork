@@ -1,2 +1,4 @@
-D:\hm\code\cloud\cloud-demo\Feigen-api\src\main\java\com\itheima\feign\feignConfig\UserClient.java
-D:\hm\code\cloud\cloud-demo\Feigen-api\src\main\java\com\itheima\feign\pojo\User.java
+D:\hm\code\cloud\springcloud\cloud-demo\Feigen-api\src\main\java\cn\itcast\feign\feignConfig\LogClient.java
+D:\hm\code\cloud\springcloud\cloud-demo\Feigen-api\src\main\java\cn\itcast\feign\feignConfig\UserClient.java
+D:\hm\code\cloud\springcloud\cloud-demo\Feigen-api\src\main\java\cn\itcast\feign\log\DefaultFeignConfiguration.java
+D:\hm\code\cloud\springcloud\cloud-demo\Feigen-api\src\main\java\cn\itcast\feign\pojo\User.java

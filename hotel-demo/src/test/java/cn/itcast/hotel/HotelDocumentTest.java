@@ -119,9 +119,29 @@ public class HotelDocumentTest {
         //发送请求
 
     }
+    //批量导入数据
+    @Test
+    public void testBulk() throws IOException {
+        //1. 从MySQL中查询所有的数据
+        List<Hotel> list = service.list();
+        //2. 创建BulkRequest请求对象
+        BulkRequest bulkRequest = new BulkRequest("hotel");
+        //3. 遍历查询结果
+        for (Hotel hotel : list) {
+            //3.1 把hotel转为hotelDoc
+            HotelDoc hotelDoc = new HotelDoc(hotel);
+            //3.2 把hotelDoc转为json
+            String json = JSON.toJSONString(hotelDoc);
+            //3.3 把请求数据add到BulkRequest
+            IndexRequest indexRequest = new IndexRequest("hotel").id(hotel.getId().toString());
+            indexRequest.source(json, XContentType.JSON);
+            bulkRequest.add(indexRequest);
+        }
+        //4.  发请求
+        client.bulk(bulkRequest, RequestOptions.DEFAULT);
+    }
 
-
-    //批量导入用户数据
+/*    //批量导入用户数据
     @Test
     public void addList() throws IOException {
 
@@ -135,8 +155,10 @@ public class HotelDocumentTest {
             request.source(json,XContentType.JSON);
            bulkRequest.add(request);
         }
+        //4.  发请求
+        client.bulk(bulkRequest, RequestOptions.DEFAULT);
+    }*/
 
-    }
 
     @AfterEach
     public void after() throws IOException {
